@@ -5,24 +5,22 @@
   text-align: center;
 }
 
-body{
-
+body {
   background-color: rgb(122, 181, 161);
 }
 
-.form{
-display: flex;
-flex-direction: column;
-gap: 5px;
-
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
-button{
-
+button {
   border: 2px solid rgb(3, 43, 33);
+  margin-left: 4em;
+  margin-right: 4em;
 }
 
-h2{
-
+h2 {
   color: rgb(3, 43, 33);
 }

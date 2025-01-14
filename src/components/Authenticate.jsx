@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export default function Authenticate({token}) {
+export default function Authenticate({ token }) {
   const [error, setError] = useState(null);
-  const [successMessage, setSuccessMessage] = useState(null)
-  const [userWelcome, setUserWelcome] = useState(null)
+  const [successMessage, setSuccessMessage] = useState(null);
+  const [userWelcome, setUserWelcome] = useState(null);
 
   async function handleClick() {
     try {
@@ -18,12 +18,11 @@ export default function Authenticate({token}) {
         }
       );
       const result = await response.json();
-      setSuccessMessage(result.message)
-      setUserWelcome(result.data.username)
-      console.log(result)
+      setSuccessMessage(result.message);
+      setUserWelcome(result.data.username);
+      console.log(result);
     } catch (error) {
       setError(error.message);
-
     }
   }
 
@@ -35,8 +34,7 @@ export default function Authenticate({token}) {
       <button onClick={handleClick}>
         "Authenticate Token" or something similar
       </button>
-      <h2>Welcome to the party, {userWelcome}</h2>
-      
+      <h2>Welcome to the party {userWelcome}</h2>
     </>
   );
 }
